@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FlowPay — регистрация</title><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#reg">К форме регистрации</a>
+<main class="wrap">
+<section class="intro"><h1>Создайте аккаунт FlowPay</h1>
+<p>Безопасные сделки с незнакомыми людьми: деньги хранятся на счёте и уходят продавцу только после вашего подтверждения.</p>
+<p>Регистрация занимает около минуты. Поля со звёздочкой обязательны.</p></section>
+<form id="reg" novalidate aria-labelledby="t">
+<h2 id="t" style="margin:0 0 20px;font-size:26px">Регистрация</h2>
+<fieldset><legend>О вас</legend>
+<div class="f"><label for="name">Имя *</label><input id="name" name="name" type="text" autocomplete="given-name" aria-describedby="name-err name-ok"><p class="err" id="name-err" role="alert"></p><p class="ok" id="name-ok"></p></div>
+<div class="f"><label for="birth">Дата рождения *</label><input id="birth" name="birth" type="date" autocomplete="bday" aria-describedby="birth-err birth-ok"><p class="err" id="birth-err" role="alert"></p><p class="ok" id="birth-ok"></p></div>
+</fieldset>
+<fieldset><legend>Контакты</legend>
+<div class="f"><label for="phone">Телефон *</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 123 45 67" aria-describedby="phone-hint phone-err phone-ok"><p class="hint" id="phone-hint">Пришлём код подтверждения.</p><p class="err" id="phone-err" role="alert"></p><p class="ok" id="phone-ok"></p></div>
+<div class="f"><label for="email">Почта *</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@mail.ru" aria-describedby="email-err email-ok"><p class="err" id="email-err" role="alert"></p><p class="ok" id="email-ok"></p></div>
+</fieldset>
+<fieldset><legend>Безопасность</legend>
+<div class="f"><label for="password">Пароль *</label><div class="pw"><input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-hint password-err password-ok"><button type="button" id="toggle" aria-pressed="false">Показать</button></div><p class="hint" id="password-hint">Не короче 8 символов, хотя бы одна цифра.</p><p class="err" id="password-err" role="alert"></p><p class="ok" id="password-ok"></p></div>
+</fieldset>
+<div class="f chk"><input id="agree" name="agree" type="checkbox" aria-describedby="agree-err"><div><label for="agree">Я принимаю условия сервиса и политику конфиденциальности *</label><p class="err" id="agree-err" role="alert"></p></div></div>
+<button class="main" type="submit">Создать аккаунт</button>
+<div class="done" id="done" tabindex="-1" role="status">Аккаунт создан. Проверьте SMS: мы отправили код подтверждения.</div>
+</form></main>
+<script src="app.js"></script></body></html>
